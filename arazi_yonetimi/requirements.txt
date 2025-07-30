@@ -1,0 +1,9 @@
+# Arazi Yönetimi Projesi - Python Gereksinimleri
+# Kurulum: pip install -r requirements.txt
+
+mysql-connector-python==8.0.33
+pandas==1.5.3
+numpy==1.24.3
+matplotlib==3.7.1
+folium==0.14.0
+seaborn==0.12.2

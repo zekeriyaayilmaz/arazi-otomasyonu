@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_51251ce936a73447f8e88922573b8722 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div style="position: fixed; 
+                        bottom: 50px; left: 50px; width: 200px; height: 120px; 
+                        background-color: white; border:2px solid grey; z-index:9999; 
+                        font-size:14px; padding: 10px">
+            <p><b>Uygunluk Skoru</b></p>
+            <p><i class="fa fa-circle" style="color:green"></i> 80-100%: Çok Uygun</p>
+            <p><i class="fa fa-circle" style="color:orange"></i> 60-79%: Uygun</p>
+            <p><i class="fa fa-circle" style="color:yellow"></i> 40-59%: Orta</p>
+            <p><i class="fa fa-circle" style="color:red"></i> 0-39%: Uygun Değil</p>
+            </div>
+            
+    
+            <div class="folium-map" id="map_51251ce936a73447f8e88922573b8722" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_51251ce936a73447f8e88922573b8722 = L.map(
+                "map_51251ce936a73447f8e88922573b8722",
+                {
+                    center: [31.78, 26.975],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 12,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_1f89cfd125551e17ff495e08946b1f47 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_1f89cfd125551e17ff495e08946b1f47.addTo(map_51251ce936a73447f8e88922573b8722);
+        
+    
+            var circle_marker_269174e1dcfaa5d70fd062f003ac907a = L.circleMarker(
+                [40.26, 30.45],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15, "stroke": true, "weight": 2}
+            ).addTo(map_51251ce936a73447f8e88922573b8722);
+        
+    
+        var popup_4da021434c5840d684f96c8723dc4b22 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_da2f486533642f436ab2f4d1018fa390 = $(`<div id="html_da2f486533642f436ab2f4d1018fa390" style="width: 100.0%; height: 100.0%;">                 <b>sera</b><br>                 En Uygun Ekin: <b>Buğday</b><br>                 Uygunluk Skoru: <b>77.33%</b><br>                 pH Skoru: 25.3%<br>                 Nem Skoru: 100.0%<br>                 Azot Skoru: 80.0%<br>                 Fosfor Skoru: 100.0%<br>                 Potasyum Skoru: 100.0%                 </div>`)[0];
+                popup_4da021434c5840d684f96c8723dc4b22.setContent(html_da2f486533642f436ab2f4d1018fa390);
+            
+        
+
+        circle_marker_269174e1dcfaa5d70fd062f003ac907a.bindPopup(popup_4da021434c5840d684f96c8723dc4b22)
+        ;
+
+        
+    
+    
+            var circle_marker_2c9d5cf3f85d929c891eca2d196dd0e6 = L.circleMarker(
+                [23.3, 23.5],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15, "stroke": true, "weight": 2}
+            ).addTo(map_51251ce936a73447f8e88922573b8722);
+        
+    
+        var popup_4e37268bb7e7c480144fa47743b45a40 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_11b34b803ae8137ad7d43debc8e136b4 = $(`<div id="html_11b34b803ae8137ad7d43debc8e136b4" style="width: 100.0%; height: 100.0%;">                 <b>patates</b><br>                 En Uygun Ekin: <b>Buğday</b><br>                 Uygunluk Skoru: <b>86.6%</b><br>                 pH Skoru: 100.0%<br>                 Nem Skoru: 75.6%<br>                 Azot Skoru: 76.0%<br>                 Fosfor Skoru: 83.33%<br>                 Potasyum Skoru: 100.0%                 </div>`)[0];
+                popup_4e37268bb7e7c480144fa47743b45a40.setContent(html_11b34b803ae8137ad7d43debc8e136b4);
+            
+        
+
+        circle_marker_2c9d5cf3f85d929c891eca2d196dd0e6.bindPopup(popup_4e37268bb7e7c480144fa47743b45a40)
+        ;
+
+        
+    
+</script>
+</html>
